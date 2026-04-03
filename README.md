@@ -36,7 +36,8 @@ GET /api/dashboard/summary
 Minimal React UI to demonstrate API integration.
 
 ## ⚙️ Setup
-npm install
+npm install || 
 npm run dev
 
-Render deployment link :- https://financial-dashboard-9s00.onrender.com
+Render backend deployment link :- https://financial-dashboard-9s00.onrender.com
+Vercel frontend deployment link :- https://financial-dashboard-rho-five.vercel.app/

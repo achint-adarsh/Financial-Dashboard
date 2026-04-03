@@ -1,6 +1,6 @@
 import Record from "../models/Record.js";
 
-export const createRecord = async (DataTransfer, userId) =>
+export const createRecord = async (data, userId) =>
 {
     return await Record.create({
         ...data,

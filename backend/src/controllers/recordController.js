@@ -45,5 +45,3 @@ export const remove = async (req, res) => {
         res.status(400).json({ message: error.message });
     }
 };
-
-e

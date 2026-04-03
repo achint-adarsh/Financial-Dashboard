@@ -11,7 +11,7 @@ router.get("/", authorize("viewer", "analyst", "admin"), controller.getAll);
 
 router.post("/", authorize("analyst", "admin"), controller.create);
 
-router.put(":/id", authorize("admin"), controller.update);
-router.delete(":/id", authorize("admin"), controller.remove);
+router.put("/:id", authorize("admin"), controller.update);
+router.delete("/:id", authorize("admin"), controller.remove);
 
 export default router;

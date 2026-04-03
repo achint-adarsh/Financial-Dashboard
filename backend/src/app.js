@@ -2,9 +2,10 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 
-import recordRoutes from "../routes/recordRoutes.js";
-import authRoutes from "../routes/authRoutes.js";
-import dashboardRoutes from "../routes/dashboardRoutes.js";
+import recordRoutes from "./routes/recordRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
+import dashboardRoutes from "./routes/dashboardRoutes.js";
+import {errorHandler} from "./middleware/errorMiddleware.js";
 
 dotenv.config();
 

@@ -1,17 +1,18 @@
 import { useState } from "react";
 import API from "../api/api.js";
 
-export default function Register({ setUser }) {
+export default function Register() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleRegister = async () => {
+  const handleRegister = async ({}) => {
     try {
-      await API.post("/auth/register", { username, email, password });
+      const res = await API.post("/auth/register", { username, email, password });
       alert("User registered! Please Login.");
+      console.log("REGISTER RESPONSE:", res.data);
     } catch (error) {
-        console.log(error.response?.data);
+      console.log(error.response?.data);
       alert("Registration failed!");
     }
   };

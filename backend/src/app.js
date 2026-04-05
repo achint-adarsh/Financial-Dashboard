@@ -11,13 +11,16 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: "*"
+}));
+
 app.use(express.json());
 
 
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
     res.status(200).json({
-        messge: "API is running",
+        message: "API is running",
         auth: {
             register: "POST /api/auth/register",
             login: "POST /api/auth/login",

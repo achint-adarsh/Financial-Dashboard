@@ -9,7 +9,7 @@ export default function Login({ setUser }) {
     try {
       const res = await API.post("/auth/login", { email, password });
 
-      console.log("FULL RESPONSE:", res.data);
+      // console.log("FULL RESPONSE:", res.data);
       
       localStorage.setItem("token", res.data.token);
 
